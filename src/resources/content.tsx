@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Youssef",
+  lastName: "Achour",
+  name: `Youssef Achour`,
+  role: "Fullstack Engineer",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Europe/Brussels", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["French", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -49,30 +49,24 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building scalable backend systems and innovative projects</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Cuik.io</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/cuik-io",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Youssef, a fullstack engineer specialized in backend development.
+      <br /> I build scalable systems and create innovative projects like Cuik.io and Magistral.ai.
     </>
   ),
 };
@@ -81,7 +75,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Brussels, Belgium`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -98,55 +92,70 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm a Brussels-based fullstack engineer with a strong specialization in backend development.
+        With a passion for building scalable systems and innovative solutions, I create projects that
+        bridge technology and real-world applications. My expertise spans from low-level systems programming
+        to modern web architectures.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Main Projects",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Cuik.io",
+        timeframe: "2023 - Present",
+        role: "Founder & Lead Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Built a scalable backend infrastructure handling real-time data processing and API integrations.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Implemented high-performance algorithms using Rust for critical system components.
+          </>,
+          <>
+            Developed the full-stack application using Next.js and FastAPI with microservices architecture.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Cuik.io Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Magistral.ai",
+        timeframe: "2023 - Present",
+        role: "Co-Founder & Backend Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Architected and implemented AI-powered backend services using FastAPI and Python.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Designed efficient data pipelines for machine learning model training and inference.
+          </>,
+          <>
+            Built robust API infrastructure handling thousands of concurrent requests with minimal latency.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Magistral.ai Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Magistral.ai Project",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
@@ -155,12 +164,12 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "ULB Brussels",
+        description: <>Civil Engineering - Applied Sciences Faculty</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "UCL",
+        description: <>Pharmacy Studies</>,
       },
     ],
   },
@@ -169,61 +178,71 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Backend Development",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>I build high-performance APIs and microservices with FastAPI, handling complex data processing and real-time systems.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "FastAPI",
+            icon: "python",
+          },
+          {
+            name: "Python",
+            icon: "python",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Backend Development",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
+        title: "Frontend & Full-Stack",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>I create modern web applications with Next.js and Astro, focusing on performance and user experience.</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
           {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "TypeScript",
+            icon: "javascript",
           },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Astro",
+            icon: "javascript",
           },
         ],
-      },  
+        images: [],
+      },
+      {
+        title: "Systems Programming",
+        description: (
+          <>I develop high-performance systems and desktop applications with Rust, C++, and Tauri for optimal efficiency.</>
+        ),
+        tags: [
+          {
+            name: "Rust",
+            icon: "rust",
+          },
+          {
+            name: "C++",
+            icon: "cpp",
+          },
+          {
+            name: "Tauri",
+            icon: "tauri",
+          },
+        ],
+        images: [],
+      },
     ],
   },
 };
